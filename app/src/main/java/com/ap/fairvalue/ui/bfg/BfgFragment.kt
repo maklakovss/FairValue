@@ -1,19 +1,15 @@
 package com.ap.fairvalue.ui.bfg
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.ap.fairvalue.R
 
 
 class BfgFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = BfgFragment()
-    }
 
     private lateinit var viewModel: BfgViewModel
 

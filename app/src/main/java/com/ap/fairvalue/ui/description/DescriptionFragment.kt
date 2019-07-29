@@ -1,19 +1,16 @@
 package com.ap.fairvalue.ui.description
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.ap.fairvalue.R
+import kotlinx.android.synthetic.main.description_fragment.*
 
 
 class DescriptionFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = DescriptionFragment()
-    }
 
     private lateinit var viewModel: DescriptionViewModel
 
@@ -27,7 +24,7 @@ class DescriptionFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(DescriptionViewModel::class.java)
-        // TODO: Use the ViewModel
+        arguments?.let { tvDescription.text = getString(arguments!!.getInt("idDescriptionString", 0)) }
     }
 
 }

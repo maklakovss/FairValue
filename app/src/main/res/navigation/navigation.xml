@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/mainFragment">
+
+    <fragment android:id="@+id/mainFragment" android:name="com.ap.fairvalue.ui.main.MainFragment"
+              android:label="main_fragment" tools:layout="@layout/main_fragment">
+        <action android:id="@+id/action_mainFragment_to_descriptionFragment" app:destination="@id/descriptionFragment"/>
+        <action android:id="@+id/action_mainFragment_to_bfgFragment" app:destination="@id/bfgFragment"/>
+        <action android:id="@+id/action_mainFragment_to_dcfFragment" app:destination="@id/dcfFragment"/>
+        <action android:id="@+id/action_mainFragment_to_ddmFragment" app:destination="@id/ddmFragment"/>
+    </fragment>
+    <fragment android:id="@+id/bfgFragment" android:name="com.ap.fairvalue.ui.bfg.BfgFragment"
+              android:label="bfg_fragment" tools:layout="@layout/bfg_fragment"/>
+    <fragment android:id="@+id/dcfFragment" android:name="com.ap.fairvalue.ui.dcf.DcfFragment"
+              android:label="dcf_fragment" tools:layout="@layout/dcf_fragment"/>
+    <fragment android:id="@+id/ddmFragment" android:name="com.ap.fairvalue.ui.ddm.DdmFragment"
+              android:label="ddm_fragment" tools:layout="@layout/ddm_fragment"/>
+    <fragment android:id="@+id/descriptionFragment" android:name="com.ap.fairvalue.ui.description.DescriptionFragment"
+              android:label="description_fragment" tools:layout="@layout/description_fragment">
+        <argument android:name="idDescriptionString" app:argType="reference"/>
+    </fragment>
+</navigation>
