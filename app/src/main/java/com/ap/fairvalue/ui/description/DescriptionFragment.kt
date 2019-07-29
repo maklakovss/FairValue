@@ -26,5 +26,4 @@ class DescriptionFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(DescriptionViewModel::class.java)
         arguments?.let { tvDescription.text = getString(arguments!!.getInt("idDescriptionString", 0)) }
     }
-
 }

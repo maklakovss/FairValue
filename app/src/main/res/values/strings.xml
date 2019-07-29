@@ -2,23 +2,8 @@
     <string name="app_name">Fair Value</string>
     <string name="dcfDescription">
         <![CDATA[Discounted Cash Flows model is a theoretical method used to estimate the value of an investment based on its future cash flows. DCF analysis finds the present value of expected future cash flows using a discount rate. Earnings Per Share you can find on many financial sites but the best way is to get it directly from financial report. There are many different meanings of discount rate you can find like investors required rate of return, best available return that you have 99,99% confidence like a Government bond, market benchmark like S&P 500 etc. And there is no one right answer what to choose, so it’s up to investors decision. Our calculator suggests two stage growth rates: from 1 to 5 years, from 6 to 10 years and from year 11 to infinity. One of the ways to predict future growth rate is to take earnings/EPS for last 5–10 years and find an average growth, but of course many variations should be taken into account. The company cannot grow infinitely so we recommend to use growth rate from 0% to 1% starting from year 11. Some people could say that company is worth the present value of its future free cash flows rather than its earnings, but we assume that earnings and free cash flows are equivalent in the long run, and that both approximate real cash profits. The user should also keep in mind that Fair Value that is produced is only as good as the numbers put into the model.]]></string>
-    <string name="bfgDescription">The Benjamin Graham formula is a formula proposed by investor and professor of
-        Columbia University, Benjamin Graham, published in his book, The Intelligent Investor. Original formula
-        introduced by Ben in his book: Value = Current (Normal) Earnings x (8.5 plus twice the expected annual growth
-        rate). One of the ways to predict future growth rate is to take earnings/EPS for the last 5–10 years and find an
-        average growth, but of course many variations should be taken into account. This formula expects reasonable 5 to
-        10 years growth rate. 8.5 in this formula is P/E base for a no-growth company. EPS is trailing 12-month earnings
-        per share.
-    </string>
-    <string name="ddmDescription">Dividend discount model (DDM) is a theoretical method for assessing the preset value
-        of a stock based on the growth rate of dividends. In theory, stocks present day price is worth the sum of all of
-        its future dividends, discounted back to their present value. Dividend Per Share you can find on many financial
-        sites but the best way is to get it directly from financial report. Our calculator suggests two stage growth
-        rates: from 1 to 5 years, from 6 to 10 years and from year 11 to infinity. One of the ways to predict future
-        dividend growth rate is to take dividends for last 10 years and find an average growth, but of course many
-        variations should be taken into account. The company cannot grow infinitely so we recommend to use growth rate
-        1% starting from year 11. DDM is generally safe for very mature companies that have an established history of
-        regular dividend payments. The main disadvantage of the DDM is that it is applicable to companies which pay
-        dividends only.
-    </string>
+    <string name="bfgDescription">
+        <![CDATA[The Benjamin Graham formula is a formula proposed by investor and professor of Columbia University, Benjamin Graham, published in his book, The Intelligent Investor. Original formula introduced by Ben in his book: Value = Current (Normal) Earnings x (8.5 plus twice the expected annual growth rate). One of the ways to predict future growth rate is to take earnings/EPS for the last 5–10 years and find an average growth, but of course many variations should be taken into account. This formula expects reasonable 5 to 10 years growth rate. 8.5 in this formula is P/E base for a no-growth company. EPS is trailing 12-month earnings per share.]]></string>
+    <string name="ddmDescription">
+        <![CDATA[Dividend discount model (DDM) is a theoretical method for assessing the preset value of a stock based on the growth rate of dividends. In theory, stocks present day price is worth the sum of all of its future dividends, discounted back to their present value. Dividend Per Share you can find on many financial sites but the best way is to get it directly from financial report. Our calculator suggests two stage growth rates: from 1 to 5 years, from 6 to 10 years and from year 11 to infinity. One of the ways to predict future dividend growth rate is to take dividends for last 10 years and find an average growth, but of course many variations should be taken into account. The company cannot grow infinitely so we recommend to use growth rate 1% starting from year 11. DDM is generally safe for very mature companies that have an established history of regular dividend payments. The main disadvantage of the DDM is that it is applicable to companies which pay dividends only.]]></string>
 </resources>
