@@ -16,10 +16,7 @@ class DcfFragment : Fragment() {
     private lateinit var viewModel: DcfViewModel
     private lateinit var binding: DcfFragmentBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.dcf_fragment, container, false);
         return binding.root
     }
