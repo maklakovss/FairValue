@@ -1,7 +1,8 @@
 package com.ap.fairvalue.ui.dcf
 
 import androidx.databinding.ObservableDouble
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
+import com.ap.fairvalue.model.FairValueModel
 
 class DcfViewModel : ViewModel() {
 
@@ -13,6 +14,14 @@ class DcfViewModel : ViewModel() {
     val fairValue = ObservableDouble(0.0)
 
     fun calc() {
-        fairValue.set(earningPerShare.get())
+        fairValue.set(
+            FairValueModel.calcDcf(
+                earningPerShare.get(),
+                growthRate5.get() / 100,
+                growthRate10.get() / 100,
+                growthRate11.get() / 100,
+                discountRate.get() / 100
+            )
+        )
     }
 }

@@ -28,12 +28,6 @@ class DcfFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(DcfViewModel::class.java)
         binding.model = viewModel
-
-//        btnDcfCalc.setOnClickListener {
-//
-//            viewModel.calc()
-//            binding.invalidateAll()
-//        }
     }
 
 }
