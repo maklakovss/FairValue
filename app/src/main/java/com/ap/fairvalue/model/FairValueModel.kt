@@ -1,5 +1,8 @@
 package com.ap.fairvalue.model
 
+import kotlin.math.pow
+import kotlin.math.roundToInt
+
 object FairValueModel {
 
     fun calcDcf(
@@ -8,24 +11,24 @@ object FairValueModel {
         growthRate10: Double,
         growthRate11: Double,
         discountRate: Double
-    ): Double {
+    ): Int {
         var eps = earningPerShare
         var growth = growthRate5
-        var value = 0.0
+        var value: Double
         var pv = 0.0
 
         for (i in 1..10) {
             if (i == 6) {
                 growth = growthRate10
             }
-            eps = eps * (growth + 1)
-            value = eps / (Math.pow(1 + discountRate, i.toDouble()))
+            eps *= (growth + 1)
+            value = eps / ((1 + discountRate).pow(i.toDouble()))
             pv += value
         }
-        var terminalYear = eps * (growthRate11 + 1)
-        var terminalValue = (terminalYear / (discountRate - growthRate11)) / Math.pow(1 + discountRate, 10.0)
+        val terminalYear = eps * (growthRate11 + 1)
+        val terminalValue = (terminalYear / (discountRate - growthRate11)) / (1 + discountRate).pow(10.0)
 
-        return terminalValue + pv
+        return (terminalValue + pv).roundToInt()
     }
 
     fun calcDdm(
@@ -34,27 +37,27 @@ object FairValueModel {
         growthRate10: Double,
         growthRate11: Double,
         discountRate: Double
-    ): Double {
+    ): Int {
         var eps = dividentPerShare
         var growth = growthRate5
-        var value = 0.0
+        var value: Double
         var pv = 0.0
 
         for (i in 1..10) {
             if (i == 6) {
                 growth = growthRate10
             }
-            eps = eps * (growth + 1)
-            value = eps / (Math.pow(1 + discountRate, i.toDouble()))
+            eps *= (growth + 1)
+            value = eps / ((1 + discountRate).pow(i.toDouble()))
             pv += value
         }
-        var terminalYear = eps * (growthRate11 + 1)
-        var terminalValue = (terminalYear / (discountRate - growthRate11)) / Math.pow(1 + discountRate, 10.0)
+        val terminalYear = eps * (growthRate11 + 1)
+        val terminalValue = (terminalYear / (discountRate - growthRate11)) / (1 + discountRate).pow(10.0)
 
-        return terminalValue + pv
+        return (terminalValue + pv).roundToInt()
     }
 
-    fun calcBcf(earlingPerShare: Double, growthRate: Double): Double {
-        return earlingPerShare * (8.5 + 2.0 * growthRate)
+    fun calcBcf(earlingPerShare: Double, growthRate: Double): Int {
+        return (earlingPerShare * (8.5 + 2.0 * growthRate)).roundToInt()
     }
 }

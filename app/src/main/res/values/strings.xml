@@ -17,4 +17,6 @@
     <string name="calculate">Calculate</string>
     <string name="earning_per_share">Earning Per Share</string>
     <string name="choose_model">Choose Model</string>
+	<string name="enter_data">Enter data</string>
+	<string name="in_next_5_10_years">(In next 5-10 years)</string>
 </resources>

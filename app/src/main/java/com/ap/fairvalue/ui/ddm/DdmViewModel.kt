@@ -1,6 +1,7 @@
 package com.ap.fairvalue.ui.ddm
 
 import androidx.databinding.ObservableDouble
+import androidx.databinding.ObservableInt
 import androidx.lifecycle.ViewModel;
 import com.ap.fairvalue.model.FairValueModel
 
@@ -10,7 +11,7 @@ class DdmViewModel : ViewModel() {
     val growthRate10 = ObservableDouble(4.0)
     val growthRate11 = ObservableDouble(1.0)
     val discountRate = ObservableDouble(5.0)
-    val fairValue = ObservableDouble(0.0)
+    val fairValue = ObservableInt(79)
 
     fun calc() {
         fairValue.set(
