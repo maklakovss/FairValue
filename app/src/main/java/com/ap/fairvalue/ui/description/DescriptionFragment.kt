@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.ap.fairvalue.R
+import com.ap.fairvalue.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.description_fragment.*
 
 
-class DescriptionFragment : Fragment() {
+class DescriptionFragment : BaseFragment() {
 
     private lateinit var viewModel: DescriptionViewModel
 

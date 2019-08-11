@@ -1,121 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<layout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.dcf.DcfFragment">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <import type="com.ap.fairvalue.ui.utils.DoubleConverter"/>
+        <variable name="model" type="com.ap.fairvalue.ui.dcf.DcfViewModel"/>
+    </data>
 
-    <TextView
-            android:text="Earning Per Share"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/etDcfEarningPerShare"/>
-    <TextView
-            android:text="Crown Rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/editText2"/>
-    <EditText
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText2"
-            app:layout_constraintEnd_toStartOf="@+id/textView6" android:layout_marginEnd="8dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText3"/>
-    <EditText
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText3"
-            app:layout_constraintEnd_toStartOf="@+id/textView7" android:layout_marginEnd="8dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText4"/>
-    <EditText
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText4" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"/>
-    <TextView
-            android:text="1-5 years"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="@+id/editText2" app:layout_constraintStart_toStartOf="@+id/editText2"/>
-    <TextView
-            android:text="6-10 years"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="@+id/editText3" app:layout_constraintStart_toStartOf="@+id/editText3"
-            android:layout_marginStart="8dp"/>
-    <TextView
-            android:text="11+ years"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView5" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etDcfEarningPerShare"
-            app:layout_constraintStart_toEndOf="@+id/textView7"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="@+id/editText4"
-            android:layout_marginEnd="8dp"/>
-    <TextView
-            android:text="%"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="89dp"
-            android:id="@+id/textView6" app:layout_constraintEnd_toStartOf="@+id/editText3"
-            android:layout_marginEnd="8dp"/>
-    <TextView
-            android:text="%"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="89dp"
-            android:id="@+id/textView7" app:layout_constraintEnd_toStartOf="@+id/editText4"
-            android:layout_marginEnd="8dp"/>
-    <EditText
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/etDcfEarningPerShare" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    <TextView
-            android:text="Discount Rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView8"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText6" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"/>
-    <EditText
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText6" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"/>
-    <TextView
-            android:text="Fair Value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView9" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText7"/>
-    <EditText
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText7" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText6" android:enabled="false"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".ui.dcf.DcfFragment">
+
+            <TextView
+                    android:text="@string/percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView13"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfCrownRate10"
+                    app:layout_constraintEnd_toStartOf="@+id/etDcfCrownRate11"
+                    android:layout_marginEnd="8dp"/>
+            <TextView
+                    android:text="@string/earning_per_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfEarningPerShare"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/etDcfEarningPerShare"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:text="@={DoubleConverter.doubleToString(model.earningPerShare)}"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                    android:text="@string/growth_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfCrownRate5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+            <TextView
+                    android:text="@string/label_1_5_years"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+                    app:layout_constraintEnd_toEndOf="@+id/etDcfCrownRate5"
+                    app:layout_constraintStart_toStartOf="@+id/etDcfCrownRate5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/etDcfCrownRate5"
+                    app:layout_constraintEnd_toStartOf="@+id/textView6"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfCrownRate10"
+                    android:text="@={DoubleConverter.doubleToString(model.growthRate5)}"/>
+
+            <TextView
+                    android:text="@string/percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfCrownRate10"
+                    app:layout_constraintEnd_toStartOf="@+id/etDcfCrownRate10"
+                    android:layout_marginEnd="8dp"/>
+
+            <TextView
+                    android:text="@string/label_6_10_years"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+                    app:layout_constraintEnd_toEndOf="@+id/etDcfCrownRate10"
+                    app:layout_constraintStart_toStartOf="@+id/etDcfCrownRate10"
+                    android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/etDcfCrownRate10"
+                    android:text="@={DoubleConverter.doubleToString(model.growthRate10)}"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfCrownRate11"
+                    app:layout_constraintEnd_toStartOf="@+id/textView13" android:layout_marginEnd="8dp"/>
+
+            <TextView
+                    android:text="@string/label_11_years"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etDcfEarningPerShare"
+                    app:layout_constraintEnd_toEndOf="@+id/etDcfCrownRate11"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintStart_toStartOf="@+id/etDcfCrownRate11"/>
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/etDcfCrownRate11"
+                    android:layout_marginTop="8dp"
+                    android:text="@={DoubleConverter.doubleToString(model.growthRate11)}"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView17"/>
+
+            <TextView
+                    android:text="@string/percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/etDcfCrownRate11"/>
+
+            <TextView
+                    android:text="@string/discount_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfDiscountRate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/etDcfDiscountRate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@={DoubleConverter.doubleToString(model.discountRate)}"
+                    app:layout_constraintTop_toBottomOf="@+id/etDcfCrownRate11"/>
+
+            <TextView
+                    android:text="@string/fair_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDcfFairValue"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/etDcfFairValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etDcfDiscountRate"
+                    android:text="@={DoubleConverter.doubleToString(model.fairValue)}"
+                    android:enabled="false" android:textColor="@android:color/holo_red_dark"/>
+
+            <Button
+                    android:text="@string/calculate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnDcfCalc"
+                    android:onClick="@{()->model.calc()}"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etDcfFairValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
