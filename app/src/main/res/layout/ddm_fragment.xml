@@ -59,7 +59,7 @@
 							app:layout_constraintBaseline_toBaselineOf="@+id/etDdmDividentPerShare"/>
 
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
@@ -113,7 +113,7 @@
 							app:layout_constraintBaseline_toBaselineOf="@+id/textView4"/>
 
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
@@ -143,7 +143,7 @@
 							app:layout_constraintBaseline_toBaselineOf="@+id/textView5"/>
 
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
@@ -176,7 +176,7 @@
 							app:layout_constraintBottom_toTopOf="@+id/etDdmCrownRate11"/>
 
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
@@ -229,7 +229,7 @@
 							app:layout_constraintBaseline_toBaselineOf="@+id/etDdmDiscountRate"/>
 
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
@@ -273,7 +273,7 @@
 							app:layout_constraintBaseline_toBaselineOf="@+id/etDdmFairValue"/>
 
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"

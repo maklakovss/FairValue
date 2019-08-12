@@ -57,7 +57,7 @@
 							app:layout_constraintBaseline_toBaselineOf="@+id/etBfgEarlingPerShare"/>
 
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
@@ -117,7 +117,7 @@
 							app:layout_constraintBottom_toBottomOf="parent"
 							app:layout_constraintStart_toStartOf="@+id/textView10"/>
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
@@ -162,7 +162,7 @@
 							app:layout_constraintBaseline_toBaselineOf="@+id/etBfgFairValue"
 							app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
 					<EditText
-							android:layout_width="70dp"
+							android:layout_width="@dimen/edit_text_width"
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
