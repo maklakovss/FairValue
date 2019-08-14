@@ -99,7 +99,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             app:layout_constraintStart_toEndOf="@+id/textView10"
                             android:layout_marginStart="8dp"
-                            android:textSize="10sp"
+                            android:textSize="@dimen/second_label_size"
                             app:layout_constraintBottom_toBottomOf="@+id/textView10"
                             app:layout_constraintTop_toTopOf="@+id/textView10"/>
 

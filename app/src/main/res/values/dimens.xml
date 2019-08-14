@@ -2,4 +2,5 @@
 <resources>
     <dimen name="edit_text_width">70dp</dimen>
     <dimen name="main_label_size">20sp</dimen>
+    <dimen name="second_label_size">10sp</dimen>
 </resources>
