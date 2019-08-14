@@ -57,7 +57,7 @@ object FairValueModel {
         return (terminalValue + pv).roundToInt()
     }
 
-    fun calcBcf(earlingPerShare: Double, growthRate: Double): Int {
+    fun calcBcf(earlingPerShare: Double, growthRate: Int): Int {
         return (earlingPerShare * (8.5 + 2.0 * growthRate)).roundToInt()
     }
 }

@@ -25,6 +25,7 @@ class DcfFragment : BaseFragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(DcfViewModel::class.java)
         binding.model = viewModel
+        requireActivity().title = getString(R.string.dcf)
     }
 
 }

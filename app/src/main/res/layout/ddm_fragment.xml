@@ -150,14 +150,14 @@
 							android:id="@+id/etDdmCrownRate10"
 							android:text="@={DoubleConverter.doubleToString(model.growthRate10)}"
 							app:layout_constraintBaseline_toBaselineOf="@+id/etDdmCrownRate11"
-							app:layout_constraintEnd_toStartOf="@+id/textView13"
+							app:layout_constraintEnd_toStartOf="@+id/tvBfgEarlingPerShare"
 							android:layout_marginEnd="8dp"/>
 
 					<TextView
 							android:text="@string/percent"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:id="@+id/textView13"
+							android:id="@+id/tvBfgEarlingPerShare"
 							app:layout_constraintBaseline_toBaselineOf="@+id/etDdmCrownRate10"
 							app:layout_constraintEnd_toStartOf="@+id/etDdmCrownRate11"
 							android:layout_marginEnd="8dp"/>

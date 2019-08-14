@@ -7,7 +7,7 @@ import com.ap.fairvalue.model.FairValueModel
 
 class BfgViewModel : ViewModel() {
     val earlingPerShare = ObservableDouble(2.43)
-    val growthRate = ObservableDouble(5.0)
+    val growthRate = ObservableInt(5)
     val fairValue = ObservableInt(45)
 
     fun calc() {

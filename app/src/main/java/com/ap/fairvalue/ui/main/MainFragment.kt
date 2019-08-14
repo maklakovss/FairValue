@@ -24,6 +24,7 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        requireActivity().title = getString(R.string.app_name)
 
         btnDcf.setOnClickListener { viewModel.onDcfClick() }
         btnDdm.setOnClickListener { viewModel.onDdmClick() }

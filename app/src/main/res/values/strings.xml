@@ -12,11 +12,14 @@
     <string name="percent">%</string>
     <string name="label_6_10_years">6-10 years</string>
     <string name="label_11_years">11+ years</string>
-    <string name="discount_rate">Discount Rate</string>
+    <string name="discount_rate">Discount Rate (%)</string>
     <string name="fair_value">Fair Value</string>
     <string name="calculate">Calculate</string>
-    <string name="earning_per_share">Earning Per Share</string>
+    <string name="earning_per_share">Earning Per Share (EPS)</string>
     <string name="choose_model">Choose Model</string>
 	<string name="enter_data">Enter data</string>
 	<string name="in_next_5_10_years">(In next 5-10 years)</string>
+    <string name="bfg">BGF</string>
+    <string name="dcf">DCF</string>
+    <string name="ddm">DDM</string>
 </resources>

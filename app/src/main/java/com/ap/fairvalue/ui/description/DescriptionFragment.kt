@@ -24,6 +24,15 @@ class DescriptionFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(DescriptionViewModel::class.java)
-        arguments?.let { tvDescription.text = getString(arguments!!.getInt("idDescriptionString", 0)) }
+        val id = arguments!!.getInt("idDescriptionString", 0)
+        arguments?.let { tvDescription.text = getString(id) }
+        requireActivity().title = getString(
+            when (id) {
+                R.string.ddmDescription -> R.string.ddm
+                R.string.dcfDescription -> R.string.dcf
+                R.string.bfgDescription -> R.string.bfg
+                else -> R.string.app_name
+            }
+        )
     }
 }
