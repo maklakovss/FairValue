@@ -53,7 +53,7 @@
 							android:inputType="numberDecimal"
 							android:ems="10"
 							android:id="@+id/etDevidendPerShare"
-							android:text="@={DoubleConverter.doubleToString(model.earningPerShare)}"
+							android:text="@={model.earningPerShareString}"
 							app:layout_constraintEnd_toEndOf="parent"
 							android:layout_marginEnd="8dp"
 							app:layout_constraintTop_toTopOf="parent"

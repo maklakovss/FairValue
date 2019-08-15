@@ -19,17 +19,15 @@ class DdmViewModel : ViewModel() {
 
     fun calc() {
         if (dividendPerShareString.get()?.isNotEmpty()!!) {
-            dividendPerShareString.get()?.let {
-                fairValue.set(
-                    FairValueModel.calcDdm(
-                        it.toDouble(),
-                        growthRate5.get() / 100.0,
-                        growthRate10.get() / 100.0,
-                        growthRate11.get() / 100.0,
-                        discountRate.get() / 100.0
-                    )
+            fairValue.set(
+                FairValueModel.calcDdm(
+                    dividendPerShareString.get()!!.toDouble(),
+                    growthRate5.get() / 100.0,
+                    growthRate10.get() / 100.0,
+                    growthRate11.get() / 100.0,
+                    discountRate.get() / 100.0
                 )
-            }
+            )
         } else {
             fairValue.set(0)
         }
