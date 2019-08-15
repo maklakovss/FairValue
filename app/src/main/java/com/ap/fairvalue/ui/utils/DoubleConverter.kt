@@ -7,7 +7,11 @@ object DoubleConverter {
     @InverseMethod("stringToDouble")
     @JvmStatic
     fun doubleToString(value: Double): String {
-        return value.toString()
+        if (value.isNaN()) {
+            return ""
+        } else {
+            return value.toString()
+        }
     }
 
     @JvmStatic
