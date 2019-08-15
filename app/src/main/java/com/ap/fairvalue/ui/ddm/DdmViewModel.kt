@@ -6,21 +6,21 @@ import androidx.lifecycle.ViewModel;
 import com.ap.fairvalue.model.FairValueModel
 
 class DdmViewModel : ViewModel() {
-    val dividentPerShare = ObservableDouble(2.43)
-    val growthRate5 = ObservableDouble(4.0)
-    val growthRate10 = ObservableDouble(4.0)
-    val growthRate11 = ObservableDouble(1.0)
-    val discountRate = ObservableDouble(5.0)
+    val dividendPerShare = ObservableDouble(2.43)
+    val growthRate5 = ObservableInt(4)
+    val growthRate10 = ObservableInt(4)
+    val growthRate11 = ObservableInt(1)
+    val discountRate = ObservableInt(5)
     val fairValue = ObservableInt(79)
 
     fun calc() {
         fairValue.set(
             FairValueModel.calcDdm(
-                dividentPerShare.get(),
-                growthRate5.get() / 100,
-                growthRate10.get() / 100,
-                growthRate11.get() / 100,
-                discountRate.get() / 100
+                dividendPerShare.get(),
+                growthRate5.get() / 100.0,
+                growthRate10.get() / 100.0,
+                growthRate11.get() / 100.0,
+                discountRate.get() / 100.0
             )
         )
     }

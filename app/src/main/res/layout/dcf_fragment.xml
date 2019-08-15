@@ -44,7 +44,7 @@
 							android:textAppearance="@style/TextAppearance.AppCompat.Body2"
 							app:layout_constraintStart_toStartOf="parent"
 							android:layout_marginStart="8dp"
-							app:layout_constraintBaseline_toBaselineOf="@+id/etDcfEarningPerShare"
+							app:layout_constraintBaseline_toBaselineOf="@+id/etDevidendPerShare"
 							android:textSize="@dimen/main_label_size"/>
 
 					<EditText
@@ -52,7 +52,7 @@
 							android:layout_height="wrap_content"
 							android:inputType="numberDecimal"
 							android:ems="10"
-							android:id="@+id/etDcfEarningPerShare"
+							android:id="@+id/etDevidendPerShare"
 							android:text="@={DoubleConverter.doubleToString(model.earningPerShare)}"
 							app:layout_constraintEnd_toEndOf="parent"
 							android:layout_marginEnd="8dp"
