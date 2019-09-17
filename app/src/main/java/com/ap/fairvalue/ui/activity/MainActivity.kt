@@ -5,6 +5,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.ap.fairvalue.R
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
+import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        initAdMob()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -24,4 +28,13 @@ class MainActivity : AppCompatActivity() {
             return super.onOptionsItemSelected(item)
         }
     }
+
+    fun initAdMob() {
+        MobileAds.initialize(this, getString(R.string.AdsAppId))
+        val adRequest = AdRequest.Builder()
+            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+            .build()
+        adView.loadAd(adRequest)
+    }
+
 }

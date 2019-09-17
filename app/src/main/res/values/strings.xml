@@ -22,4 +22,6 @@
     <string name="bfg">BGF</string>
     <string name="dcf">DCF</string>
     <string name="ddm">DDM</string>
+    <string name="AdsAppId">App</string>
+    <string name="AdsBannerId">Banner</string>
 </resources>
