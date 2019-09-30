@@ -22,6 +22,6 @@
     <string name="bfg">BGF</string>
     <string name="dcf">DCF</string>
     <string name="ddm">DDM</string>
-    <string name="AdsAppId">App</string>
-    <string name="AdsBannerId">Banner</string>
+    <string name="AdsAppId">ca-app-pub-4962574277203793~7403751684</string>
+    <string name="AdsBannerId">ca-app-pub-4962574277203793/1121706914</string>
 </resources>

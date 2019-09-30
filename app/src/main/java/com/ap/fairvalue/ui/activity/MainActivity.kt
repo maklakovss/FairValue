@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     fun initAdMob() {
         MobileAds.initialize(this, getString(R.string.AdsAppId))
         val adRequest = AdRequest.Builder()
-            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
             .build()
         adView.loadAd(adRequest)
     }

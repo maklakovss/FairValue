@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "98880107280",
+    "firebase_url": "https://fairvalue-361c4.firebaseio.com",
+    "project_id": "fairvalue-361c4",
+    "storage_bucket": "fairvalue-361c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98880107280:android:a1d839cda21b259bf7ab95",
+        "android_client_info": {
+          "package_name": "com.ap.fairvalue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98880107280-f60617aafvj36uqv6tb021g5ssqqth7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4qmLpQaWHNGmdjFrp70_WZfTKfyPAozM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98880107280-f60617aafvj36uqv6tb021g5ssqqth7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4962574277203793~7403751684"
+    }
+  ],
+  "configuration_version": "1"
+}
