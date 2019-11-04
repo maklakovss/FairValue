@@ -36,7 +36,25 @@ class DdmViewModel : ViewModel() {
         }
     }
 
-    fun onDdmGrowthRateValueChanged(fromUser: Boolean) {
+    fun onDdmGrowthRate5ValueChanged(fromUser: Boolean) {
+        if (fromUser) {
+            needKeyboardHide.value = true
+        }
+    }
+
+    fun onDdmGrowthRate10ValueChanged(fromUser: Boolean) {
+        if (fromUser) {
+            needKeyboardHide.value = true
+        }
+    }
+
+    fun onDdmGrowthRate11ValueChanged(fromUser: Boolean) {
+        if (fromUser) {
+            needKeyboardHide.value = true
+        }
+    }
+
+    fun onDdmDiscountRateValueChanged(fromUser: Boolean) {
         if (fromUser) {
             needKeyboardHide.value = true
         }
