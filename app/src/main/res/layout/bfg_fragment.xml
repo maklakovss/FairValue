@@ -84,7 +84,7 @@
                         android:layout_height="100dp">
 
                     <TextView
-                            android:text="@string/discount_rate"
+                            android:text="@string/growth_rate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textView10"
@@ -118,19 +118,22 @@
                             android:textSize="@dimen/main_label_size"/>
 
                     <SeekBar
-                            android:thumbTint="@android:color/black"
+                            android:id="@+id/sbBfgGrowthRate"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/sbBfgGrowthRate"
-                            app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="8dp"
-                            app:layout_constraintEnd_toEndOf="parent"
                             android:layout_marginEnd="8dp"
-                            android:progress="@={model.growthRate}"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:max="50"
+                            android:progress="@={model.growthRate}"
+                            android:onProgressChanged="@{(seekBar, progresValue, fromUser) -> model.onBfgGrowthRateValueChanged(fromUser)}"
+                            android:thumbTint="@android:color/black"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView10"
-                            app:layout_constraintHorizontal_bias="0.5"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -187,7 +190,7 @@
                     android:text="@string/calculate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btnDcfCalc"
+                    android:id="@+id/btnBfgCalc"
                     android:onClick="@{()->model.calc()}"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
