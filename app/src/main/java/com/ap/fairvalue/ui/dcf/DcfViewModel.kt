@@ -2,6 +2,7 @@ package com.ap.fairvalue.ui.dcf
 
 import androidx.databinding.ObservableField
 import androidx.databinding.ObservableInt
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ap.fairvalue.model.FairValueModel
 
@@ -13,6 +14,7 @@ class DcfViewModel : ViewModel() {
     val growthRate11 = ObservableInt(1)
     val discountRate = ObservableInt(5)
     val fairValue = ObservableInt(79)
+    val needKeyboardHide = MutableLiveData<Boolean>(false)
 
     fun calc() {
         if (earningPerShareString.get()?.isNotEmpty()!!) {
@@ -27,6 +29,30 @@ class DcfViewModel : ViewModel() {
             )
         } else {
             fairValue.set(0)
+        }
+    }
+
+    fun onDcfGrowthRate5ValueChanged(fromUser: Boolean) {
+        if (fromUser) {
+            needKeyboardHide.value = true
+        }
+    }
+
+    fun onDcfGrowthRate10ValueChanged(fromUser: Boolean) {
+        if (fromUser) {
+            needKeyboardHide.value = true
+        }
+    }
+
+    fun onDcfGrowthRate11ValueChanged(fromUser: Boolean) {
+        if (fromUser) {
+            needKeyboardHide.value = true
+        }
+    }
+
+    fun onDcfDiscountRateValueChanged(fromUser: Boolean) {
+        if (fromUser) {
+            needKeyboardHide.value = true
         }
     }
 }

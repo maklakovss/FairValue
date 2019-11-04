@@ -131,7 +131,7 @@
                             android:progress="@={model.growthRate5}"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/seekBar"
+                            android:id="@+id/sbDcfGrowthRate5"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_marginStart="8dp"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -165,14 +165,15 @@
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:layout_marginTop="8dp"
-                            app:layout_constraintTop_toBottomOf="@+id/seekBar" tools:text="5"/>
+                            app:layout_constraintTop_toBottomOf="@+id/sbDcfGrowthRate5"
+                            tools:text="5" />
 
                     <SeekBar
                             android:progress="@={model.growthRate10}"
                             android:thumbTint="@android:color/black"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/seekBar2"
+                            android:id="@+id/sbDcfGrowthRate10"
                             app:layout_constraintTop_toBottomOf="@+id/tv10years"
                             app:layout_constraintEnd_toEndOf="parent"
                             android:layout_marginEnd="8dp"
@@ -205,7 +206,7 @@
                             android:textAlignment="center"
                             android:textStyle="bold"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                            app:layout_constraintTop_toBottomOf="@+id/seekBar2"
+                            app:layout_constraintTop_toBottomOf="@+id/sbDcfGrowthRate10"
                             android:layout_marginTop="8dp"/>
 
                     <SeekBar
@@ -213,7 +214,7 @@
                             android:thumbTint="@android:color/black"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/seekBar3"
+                            android:id="@+id/sbDcfGrowthRate11"
                             app:layout_constraintTop_toBottomOf="@+id/tv11years"
                             app:layout_constraintEnd_toEndOf="parent"
                             android:layout_marginEnd="8dp"
@@ -277,7 +278,7 @@
                             android:thumbTint="@android:color/black"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:id="@+id/seekBar4"
+                            android:id="@+id/sbDcfDiscountRate"
                             android:layout_marginTop="8dp"
                             app:layout_constraintTop_toBottomOf="@+id/textView8"
                             app:layout_constraintStart_toStartOf="parent"
