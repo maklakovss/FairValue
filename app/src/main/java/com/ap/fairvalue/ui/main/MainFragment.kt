@@ -11,13 +11,22 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.ap.fairvalue.R
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
 import kotlinx.android.synthetic.main.main_fragment.*
+import timber.log.Timber
 
 class MainFragment : Fragment() {
 
     private lateinit var viewModel: MainViewModel
+    private var interstitialAd: InterstitialAd? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
@@ -34,15 +43,27 @@ class MainFragment : Fragment() {
         btnBgfDescription.setOnClickListener { viewModel.onBgfDescriptionClick() }
 
         viewModel.needShowDcf.observe(this, Observer { value ->
-            observerNavigation(value, viewModel.needShowDcf, R.id.action_mainFragment_to_dcfFragment)
+            observerNavigation(
+                value,
+                viewModel.needShowDcf,
+                R.id.action_mainFragment_to_dcfFragment
+            )
         })
 
         viewModel.needShowBgf.observe(this, Observer { value ->
-            observerNavigation(value, viewModel.needShowBgf, R.id.action_mainFragment_to_bfgFragment)
+            observerNavigation(
+                value,
+                viewModel.needShowBgf,
+                R.id.action_mainFragment_to_bfgFragment
+            )
         })
 
         viewModel.needShowDdm.observe(this, Observer { value ->
-            observerNavigation(value, viewModel.needShowDdm, R.id.action_mainFragment_to_ddmFragment)
+            observerNavigation(
+                value,
+                viewModel.needShowDdm,
+                R.id.action_mainFragment_to_ddmFragment
+            )
         })
 
         viewModel.needShowDcfDescription.observe(this, Observer { value ->
@@ -68,16 +89,73 @@ class MainFragment : Fragment() {
                 R.string.ddmDescription
             )
         })
+
+        viewModel.needShowInterstitialAd.observe(this, Observer { showInterstitialAd() })
+
+        initInterstitialAd()
     }
 
-    private fun observerNavigation(value: Boolean, liveBoolean: MutableLiveData<Boolean>, actionId: Int) {
+    private fun initInterstitialAd() {
+        interstitialAd = InterstitialAd(requireActivity())
+        interstitialAd?.adListener = object : AdListener() {
+            override fun onAdClosed() {
+                super.onAdClosed()
+                Timber.d("onAdClosed")
+            }
+
+            override fun onAdFailedToLoad(i: Int) {
+                super.onAdFailedToLoad(i)
+                Timber.d("onAdFailedToLoad %d", i)
+            }
+
+            override fun onAdLoaded() {
+                super.onAdLoaded()
+                Timber.d("onAdLoaded")
+                showInterstitialAd()
+            }
+
+            override fun onAdClicked() {
+                super.onAdClicked()
+                Timber.d("onAdClicked")
+            }
+        }
+        interstitialAd?.adUnitId = getString(R.string.AdsPageId)
+        interstitialAd?.loadAd(AdRequest.Builder().build())
+
+
+    }
+
+    private fun showInterstitialAd() {
+        interstitialAd?.let {
+            if (it.isLoaded() && viewModel.needShowInterstitialAd.value ?: false) {
+                viewModel.needShowInterstitialAd.value = false
+                it.show()
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        interstitialAd?.adListener = null
+        interstitialAd = null
+        super.onDestroy()
+    }
+
+    private fun observerNavigation(
+        value: Boolean,
+        liveBoolean: MutableLiveData<Boolean>,
+        actionId: Int
+    ) {
         if (value) {
             view?.let { Navigation.findNavController(view!!).navigate(actionId) }
             liveBoolean.value = false
         }
     }
 
-    private fun observerNavigationDescription(value: Boolean, liveBoolean: MutableLiveData<Boolean>, idString: Int) {
+    private fun observerNavigationDescription(
+        value: Boolean,
+        liveBoolean: MutableLiveData<Boolean>,
+        idString: Int
+    ) {
         if (value) {
             view?.let {
                 Navigation.findNavController(view!!)

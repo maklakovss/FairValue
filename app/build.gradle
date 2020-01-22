@@ -65,14 +65,14 @@ dependencies {
 
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
-    implementation 'com.google.android.gms:play-services-ads:18.2.0'
-    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.android.gms:play-services-ads:18.3.0'
+    implementation 'com.google.firebase:firebase-core:17.2.2'
 //    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 //    implementation 'com.google.firebase:firebase-ads:18.2.0'
 
 
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:2.8.47'
+    testImplementation 'org.mockito:mockito-core:2.21.0'
     testImplementation 'org.robolectric:robolectric:4.3'
 
 
