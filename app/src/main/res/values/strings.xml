@@ -25,4 +25,7 @@
     <string name="AdsAppId">ca-app-pub-4962574277203793~7403751684</string>
     <string name="AdsBannerId">ca-app-pub-4962574277203793/1121706914</string>
     <string name="AdsPageId">ca-app-pub-4962574277203793/8397561703</string>
+    <string name="dcf_discounted_cash_flow">DCF: Discounted Cash Flow</string>
+    <string name="ddm_dividend_discount_model">DDM: Dividend Discount Model</string>
+    <string name="bgf_benjamin_graham_formula">BGF: Benjamin Graham Formula</string>
 </resources>

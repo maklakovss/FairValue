@@ -39,7 +39,7 @@
 
 				<androidx.constraintlayout.widget.ConstraintLayout
 						android:layout_width="match_parent"
-						android:layout_height="100dp">
+						android:layout_height="60dp">
 
 					<TextView
 							android:id="@+id/textView"
@@ -253,7 +253,7 @@
 
 				<androidx.constraintlayout.widget.ConstraintLayout
 						android:layout_width="match_parent"
-						android:layout_height="100dp">
+						android:layout_height="60dp">
 
 					<TextView
 							android:id="@+id/textView8"
@@ -317,7 +317,7 @@
 
 				<androidx.constraintlayout.widget.ConstraintLayout
 						android:layout_width="match_parent"
-						android:layout_height="100dp">
+						android:layout_height="60dp">
 
 					<TextView
 							android:id="@+id/textView9"

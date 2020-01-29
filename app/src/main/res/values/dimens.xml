@@ -4,5 +4,5 @@
     <dimen name="main_label_size">20sp</dimen>
     <dimen name="small_label_size">10sp</dimen>
     <dimen name="midle_label_size">12sp</dimen>
-    <dimen name="large_label_size">20sp</dimen>
+    <dimen name="large_label_size">18sp</dimen>
 </resources>
